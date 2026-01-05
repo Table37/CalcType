@@ -1,0 +1,65 @@
+// CalcTrash V1.0
+// A simple calculator program made with CalcType scripting language.
+
+ana "add" "sub" "mul" "div" "quit" // valid operations
+rsr o lop // valid operations
+
+cui "CalcTrash V1.0\nEnter Your Operation.\n>> " !beginning // label so i can loop the thing
+
+rsr r lop // store input to register "r"
+
+aii r o
+cgl "main"
+cgl "NonValid"
+
+!main
+cit r "==" "quit"
+cgl "quit"
+cui "Enter First Number:\n>> "
+rsr a lop
+cui "Enter Second Number:\n>> "
+rsr b lop
+
+cit r "==" "add"
+cgl "add"
+cit r "==" "sub"
+cgl "sub"
+cit r "==" "mul"
+cgl "mul"
+cit r "==" "div"
+cgl "div"
+
+cpt "Error: Non-Valid Operation" !NonValid
+cws 2
+cgl "beginning"
+
+// addition code
+mad a b !add
+cpt "Your answer is: " lop "\n"
+cws 2
+cgl "beginning"
+
+// subtraction code
+msb a b !sub
+cpt "Your answer is: " lop "\n"
+cws 2
+cgl "beginning"
+
+// multiplication code
+mml a b !mul
+cpt "Your answer is: " lop "\n" 
+cws 2
+cgl "beginning"
+
+// division code
+mdv a b !div
+cpt "Your answer is: " lop "\n"
+cws 2
+cgl "beginning"
+
+// quit code
+cpt "Thank you for using CalcTrash." !quit
+cws 2
+cgl "eof"
+
+!eof
