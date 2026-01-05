@@ -1,5 +1,5 @@
 #                           CalcType Version 0.1 Alpha
-#                    (For commands, refer to classesandshit.py)
+#                       (For commands, refer to classes.py)
 
 import classes
 import string
@@ -118,3 +118,4 @@ while True:
     TargetClass = eval("classes.commands." + Command[0])
     empty = {}
     eval(f"TargetClass.{Command[1:]}(programdata, {Args})")
+
