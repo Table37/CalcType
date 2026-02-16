@@ -1,4 +1,4 @@
-# Classes and shit
+# Classes
 
 import math
 import sys
